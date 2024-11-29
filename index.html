@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RestRight - Optimal Bedtime Calculator</title>
+</head>
+<body>
+    <h1>RestRight - Find Your Optimal Bedtime</h1>
+    
+    <label for="wakeUpTime">When do you want to wake up? (HH:MM):</label>
+    <input type="time" id="wakeUpTime"><br><br>
+
+    <label for="sleepDuration">How many hours do you want to sleep?</label>
+    <input type="number" id="sleepDuration" min="1" max="24"><br><br>
+
+    <button onclick="findBedtime()">Calculate Bedtime</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function findBedtime() {
+            // Get the wake-up time and sleep duration from the user
+            var wakeUpTime = document.getElementById("wakeUpTime").value;
+            var sleepDuration = document.getElementById("sleepDuration").value;
+
+            if (!wakeUpTime || !sleepDuration) {
+                document.getElementById("result").innerText = "Please enter both wake-up time and sleep duration.";
+                return;
+            }
+
+            // Split the wake-up time into hours and minutes
+            var timeParts = wakeUpTime.split(":");
+            var wakeUpHour = parseInt(timeParts[0]);
+            var wakeUpMinute = parseInt(timeParts[1]);
+
+            // Subtract sleep duration from the wake-up time
+            var bedtimeHour = wakeUpHour - sleepDuration;
+            var bedtimeMinute = wakeUpMinute;
+
+            if (bedtimeHour < 0) {
+                bedtimeHour += 24;
+            }
+
+            var period = bedtimeHour >= 12 ? "PM" : "AM";  // Determine AM or PM
+            var hourIn12hrFormat = bedtimeHour % 12;  // Convert hour to 12-hour format
+
+            // If the hour is 0, it should be 12 (for midnight)
+            if (hourIn12hrFormat === 0) {
+                hourIn12hrFormat = 12;
+            }
+
+            var formattedMinute = bedtimeMinute < 10 ? "0" + bedtimeMinute : bedtimeMinute;
+
+            var bedtime = hourIn12hrFormat + ":" + formattedMinute + " " + period;
+
+            document.getElementById("result").innerText = "Your optimal bedtime is: " + bedtime;
+        }
+    </script>
+</body>
+</html>
