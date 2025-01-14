@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <title>RestRight - Optimal Bedtime Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>RestRight - Find Your Optimal Bedtime</h1>
+    <div class="cover">
+        <h1>RestRight - Find Your Optimal Bedtime</h1>
     
-    <label for="wakeUpTime">When do you want to wake up? (HH:MM):</label>
-    <input type="time" id="wakeUpTime"><br><br>
+        <label for="wakeUpTime">WAKR UP TIME:<label>
+        <input type="time" id="wakeUpTime"><br><br>
 
-    <label for="sleepDuration">How many hours do you want to sleep?</label>
-    <input type="number" id="sleepDuration" min="1" max="24"><br><br>
+        <label for="sleepDuration">HOURS OF SLEEP</label>
+        <input type="number" id="sleepDuration" min="1" max="24"><br><br>
 
-    <button onclick="findBedtime()">Calculate Bedtime</button>
+        <button onclick="findBedtime()" class="button">Calculate Bedtime</button>
 
-    <h2 id="result"></h2>
+        <h2 id="result"></h2>
+    </div>
 
     <script>
         function findBedtime() {
