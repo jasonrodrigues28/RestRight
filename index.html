@@ -8,21 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Playwrite+AR&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,900;1,200;1,300;1,400;1,500;1,900&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cover">
-        <div class="title">
-            <h1 class="poppins-black">Rest Right</h1>
-            <h class="poppins-light">FIND YOUR OPTIMAL BEDTIME</h4>
+    <div class="out-box">
+        <div class="cover">
+            <div class="contents">
+                <div class="title">
+                    <h1 class="poppins-black">Rest Right</h1>
+                    <h4 class="poppins-light">FIND YOUR OPTIMAL BEDTIME</h4>
+                </div>
+                <div class="working">
+                    <label for="wakeUpTime">WAKR UP TIME:<label>
+                    <input type="time" id="wakeUpTime"><br><br>
+                
+                    <label for="sleepDuration">HOURS OF SLEEP</label>
+                    <input type="number" id="sleepDuration" min="1" max="24"><br><br>
+                
+                    <button onclick="findBedtime()" class="button">Calculate Bedtime</button>
+            
+                    <h2 id="result"></h2>
+                </div>
+            </div>
         </div>
-
-        <label for="wakeUpTime">WAKR UP TIME:<label>
-        <input type="time" id="wakeUpTime"><br><br>
-
-        <label for="sleepDuration">HOURS OF SLEEP</label>
-        <input type="number" id="sleepDuration" min="1" max="24"><br><br>
-
-        <button onclick="findBedtime()" class="button">Calculate Bedtime</button>
-
-        <h2 id="result"></h2>
     </div>
 
     <script>
