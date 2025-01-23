@@ -136,12 +136,20 @@ body {
   background-color: #141424;
 }
 
-.out-box {
+.contents {
   display: flex;
+  justify-content: center; 
+  align-items: center;
+  background: #39bda7;
 }
 
 .cover {
-  background: white;
   width: 600px;
   height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #99a3df, #243474);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
