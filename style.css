@@ -136,21 +136,24 @@ body {
   background-color: #141424;
 }
 
-.contents {
+.container {
   display: flex;
   justify-content: center; 
   align-items: center;
-  flex-direction: column;
-  height: 100vh;
-
+  min-height: 100vh;
 }
 
-.cover {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
+.contents {
   background: linear-gradient(to bottom right, #99a3df, #243474);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 50px;
+  padding: 100px;
+  width: 650px;
+}
+
+#wakeUpTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
