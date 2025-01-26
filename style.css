@@ -155,5 +155,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1%;
+  border-radius: 10px;
+  width: 450px;
+  height: 30px; 
+}
+
+#sleepDuration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  border-radius: 10px;
+  width: 450px;
+  height: 30px; 
+}
+
+.title {
+  text-align: center;
+  padding: 5%;
+  padding-top: 0;
+  color: rgb(152, 234, 255)
+}
+
+.working > label {
+  color: white;
+  flex: 1;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
 }
