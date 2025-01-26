@@ -11,20 +11,20 @@
 <body>
     <div class="container">
         <div class="contents">
-            <div class="title" style="text-align: center">
+            <div class="title">
                 <h1 class="poppins-black">Rest Right</h1>
                 <h4 class="poppins-light">FIND YOUR OPTIMAL BEDTIME</h4>
             </div>
         
-            <div class="working" style="background: green;">
-                <label for="wakeUpTime">WAKR UP TIME:<label>
+            <div class="working poppins-regular-italic">
+                <label for="wakeUpTime">WAKR UP TIME :<label>
                 <input type="time" id="wakeUpTime"><br><br>
         
-                <label for="sleepDuration">HOURS OF SLEEP</label>
+                <label for="sleepDuration">HOURS OF SLEEP :</label>
                 <input type="number" id="sleepDuration" min="1" max="24"><br><br>
             </div>
         
-            <div class="btn" style="background: blue">
+            <div class="btn">
                 <button onclick="findBedtime()" class="button">CalculateBedtime</button>
                 <h2 id="result"></h2>
         </div>
