@@ -11,3 +11,8 @@
 1. Enter the number of hours you want to sleep.  
 2. RestRight suggests the best times to go to bed.  
 3. Wake up at the right moment to feel more refreshed!  
+
+## Try It Now  👇 
+<a href="https://jasonrodrigues28.github.io/RestRight/" target="_blank">
+  <img src="https://img.shields.io/badge/Try%20RestRight%20🚀-blue?style=for-the-badge" alt="Try RestRight">
+</a>
